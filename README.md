@@ -34,15 +34,15 @@ sudo make install
 
 # Pin configuration (you can change them in the .H file)
 
-SPI CS pin = GPIO-7
-SPI MOSI Pin = GPIO-10
-SPI CLK Pin = GPIO-11
-PIN_DI = GPIO-14
-PIN_RW = GPIO-15;
-PIN_E = GPIO-18;
-PIN_CS1 = GPIO-23;
-PIN_CS2 = GPIO-24;
-PIN_RES = GPIO-1;
+- SPI CS pin = GPIO-7
+- SPI MOSI Pin = GPIO-10
+- SPI CLK Pin = GPIO-11
+- PIN_DI = GPIO-14
+- PIN_RW = GPIO-15
+- PIN_E = GPIO-18
+- PIN_CS1 = GPIO-23
+- PIN_CS2 = GPIO-24
+- PIN_RES = GPIO-1
 
 # Connection Diagram (TDB)
 
