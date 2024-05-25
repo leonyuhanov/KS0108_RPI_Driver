@@ -46,3 +46,4 @@ sudo make install
 
 # Connection Diagram (TDB)
 
+![Interface Board](https://github.com/leonyuhanov/KS0108_RPI_Driver/blob/main/RPI_to_KS0108_InterfaceBoard.png)
