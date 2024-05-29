@@ -47,3 +47,11 @@ sudo make install
 # Connection Diagram (TDB)
 
 ![Interface Board](https://github.com/leonyuhanov/KS0108_RPI_Driver/blob/main/RPI_to_KS0108_InterfaceBoard.png)
+
+# Runing the app
+
+Because this uses SPI, you need to run it as root!
+
+```
+sudo ./appName
+```
