@@ -108,6 +108,7 @@ void KS0108X3_RPI_Driver::enablePulse(void)
 	gpiod_line_set_value(GPIO_E, 1);
 	for(delayCnt=0; delayCnt<numberOfWritestoAvoidDelay; delayCnt++)
 	{
+		//This loop is to create an aprox 1 microsecond delay, as usleep(1) creates a far greater delay
 		gpiod_line_set_value(GPIO_E, 1);
 	}
 	//usleep(1);
