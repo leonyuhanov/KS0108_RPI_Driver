@@ -1,5 +1,5 @@
 # KS0108_RPI_Driver
-LCD Screen driver for the 192x64px KS0108(3 chip device) for the Raspberry Pi
+LCD Screen driver for the 192x64px KS0108(3 chip device) for the Raspberry Pi 4 & Below, for V5 please scroll down as the setup instructions are very different
 
 1st, these screens are terrible, dont use them! But if you have to please follow along :)
 
@@ -55,3 +55,51 @@ Because this uses SPI, you need to run it as root!
 ```
 sudo ./appName
 ```
+
+# Set up for the RAspberry Pi 5
+
+- Install the latest Raspi OS 32BIT!
+- Run sudo raspi-config
+
+```
+- enable spi
+- enable serial
+- disable i2c
+- disable 1wire
+- disable camera
+```
+
+- Open the boot config file and add the following to enable SPI1
+
+```
+sudo nano /boot/firmware/config.txt
+add:
+dtoverlay=spi1-1cs
+save and restart
+```
+
+- Update the system
+
+```
+sudo apt-get update
+sudo apt-get upgrade
+```
+
+- Install FTPD
+
+```
+sudo apt-get install pure-ftpd
+```
+
+- Install the GPIOD Lib Includes
+
+```
+sudo apt-get install libgpiod-dev
+```
+
+- Compile with below or the included make file
+
+```
+g++ -o lcdScreenApp lcdScreenApp.cpp KS0108X3_RPI_Driver.cpp -lgpiod
+```
+  
