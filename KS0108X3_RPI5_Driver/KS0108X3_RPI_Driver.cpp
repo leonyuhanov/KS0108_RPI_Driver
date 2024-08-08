@@ -168,6 +168,7 @@ void KS0108X3_RPI_Driver::write_byte_SPI(uint8_t _byte)
 	struct spi_ioc_transfer spiDataTransferBlock;
 	uint8_t returnBuffer;
 	uint8_t dataBlock[2] = {_byte, 0};
+	memset(&spiDataTransferBlock, 0, sizeof(spiDataTransferBlock));
 
 	spiDataTransferBlock.tx_buf = (unsigned long)dataBlock;
 	spiDataTransferBlock.rx_buf = (unsigned long)returnBuffer;
